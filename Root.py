@@ -17,10 +17,17 @@ while True:
         ValorUsuario= input("Introduce el nombre: ")
         list_usuarios.append(obj.get_name(in_name=ValorUsuario))
         print(list_usuarios)
-    elif opciones_menu == 1:
-        print("Eliminar Usuarios")
 
-    elif opciones_menu == 1:
+    elif opciones_menu == 2:
+        print("Eliminar Usuarios")
+        try :
+            to_remove_name=input("Ingresa el usuario a eliminar: ")
+            list_usuarios.remove(to_remove_name)
+            print("Eliminado.")
+        except Exception as notfound:
+            print("el usuario no existe")
+
+    elif opciones_menu == 3:
         print("Actualizar Usuarios")
 
     else:
